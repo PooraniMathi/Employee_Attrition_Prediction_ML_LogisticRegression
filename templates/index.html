@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Attrition Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Employee Attrition Predictor</h1>
+        <form method="POST" action="/predict" class="grid-form">
+
+            <div class="field"><label>Age</label><input type="number" name="age" required></div>
+            <div class="field"><label>Distance from Home</label><input type="number" name="distance" required></div>
+
+            <div class="field"><label>Monthly Income</label><input type="number" name="income" required></div>
+            <div class="field"><label>Percent Salary Hike</label><input type="number" name="hike" required></div>
+
+            <div class="field"><label>Total Working Years</label><input type="number" name="years_total" required></div>
+            <div class="field"><label>Years at Company</label><input type="number" name="years_company" required></div>
+
+            <div class="field"><label>Years in Current Role</label><input type="number" name="years_role" required></div>
+            <div class="field"><label>Years Since Last Promotion</label><input type="number" name="years_promo" required></div>
+
+            <div class="field"><label>Years with Current Manager</label><input type="number" name="years_manager" required></div>
+            <div class="field">
+                <label>Business Travel</label>
+                <select name="business_travel">
+                    <option>Travel_Rarely</option>
+                    <option>Travel_Frequently</option>
+                    <option>Non-Travel</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Department</label>
+                <select name="department">
+                    <option>Sales</option>
+                    <option>Research & Development</option>
+                    <option>Human Resources</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Education Field</label>
+                <select name="education_field">
+                    <option>Life Sciences</option>
+                    <option>Other</option>
+                    <option>Medical</option>
+                    <option>Marketing</option>
+                    <option>Technical Degree</option>
+                    <option>Human Resources</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Gender</label>
+                <select name="gender">
+                    <option>Female</option>
+                    <option>Male</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Job Role</label>
+                <select name="job_role">
+                    <option>Sales Executive</option>
+                    <option>Research Scientist</option>
+                    <option>Laboratory Technician</option>
+                    <option>Manufacturing Director</option>
+                    <option>Healthcare Representative</option>
+                    <option>Manager</option>
+                    <option>Sales Representative</option>
+                    <option>Research Director</option>
+                    <option>Human Resources</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Marital Status</label>
+                <select name="marital_status">
+                    <option>Single</option>
+                    <option>Married</option>
+                    <option>Divorced</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Overtime</label>
+                <select name="overtime">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+            <div class="field full-width">
+                <button type="submit">🔮 Predict</button>
+            </div>
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
