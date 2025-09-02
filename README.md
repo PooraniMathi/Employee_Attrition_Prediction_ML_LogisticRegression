@@ -1,4 +1,6 @@
 # Employee Attrition Prediction using Logistic Regression
+<img width="1062" height="963" alt="image" src="https://github.com/user-attachments/assets/9878c5c4-d35a-4754-b494-7c6613bad70b" />
+
 
 Objective:
 This project aims to predict whether an employee is likely to leave the company (attrition) using a Logistic Regression model. Employee attrition is a critical concern for organizations, and predictive analytics can assist in developing proactive HR strategies.
