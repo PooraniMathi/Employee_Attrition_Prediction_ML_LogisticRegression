@@ -47,3 +47,5 @@ These metrics help in understanding the classification performance, especially i
 
 Conclusion:
 The logistic regression model provides an efficient way to predict employee attrition with interpretable results. With further tuning and additional features, the model could be enhanced to support HR decision-making processes more effectively.
+<img width="1056" height="1026" alt="image" src="https://github.com/user-attachments/assets/d1b13b03-940d-42f0-b846-f4794540cc52" />
+
